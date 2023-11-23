@@ -2,6 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="app.css" />
     <title>Level-up Hackathon</title>
@@ -9,15 +15,40 @@
   <body>
     <nav>
       <div class="nav-header">
-        <img
-          src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
-          alt=" Shopify-logo"
-        />
+        <div class="nav-section">
+          <a
+            href="http://admin.shopify.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="image-icon desktop-hide"
+              src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
+              alt=" image icon"
+            />
+          </a>
+        </div>
+
+        <div class="image-content">
+          <a
+            href="http://admin.shopify.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="mobile-display"
+              src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
+              alt=" Shopify-logo"
+            />
+          </a>
+        </div>
+
         <div class="nav-input">
           <input class="search-bar" type="text" placeholder="Search" />
 
           <button class="search-button">
             <img
+              class="search-image-icon"
               src="https://crushingit.tech/hackathon-assets/icon-search.svg"
               alt="icon-image"
             />
@@ -25,21 +56,81 @@
         </div>
 
         <div class="notification-icon">
-          <button class="bell-button">
+          <div class="bell-button">
             <img
               src="https://crushingit.tech/hackathon-assets/icon-bell.svg"
               alt="Notificaion-bell"
             />
-          </button>
+          </div>
 
           <div class="nav-text">
-            <div class="nav-text-content">
-              Davii Collections <span class="nav_text-content"> DC</span>
-            </div>
+            <div class="nav-text-content">Davii Collections</div>
+            <div class="nav_text-content">DC</div>
           </div>
         </div>
       </div>
     </nav>
+
+    <header>
+      <div class="container">
+        <div class="section">
+          <p>
+            Extend your trail $1/month for 3 months on select
+            <span class="section-plan">plans.</span>
+          </p>
+          <div class="section-text">
+            <div class="section-text2">Select a plan</div>
+            <img
+              class="search-image-icon search-image-icon2"
+              src="https://crushingit.tech/hackathon-assets/icon-cross.svg"
+              alt="A cancle"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-section collapsible--expanded">
+        <div class="main-section_text">
+          <div class="main-text-content">
+            <div class="main-text-content-1">Setup guide</div>
+            <div class="main-text-content-2">
+              Use this personalized guide to get your store up and running
+            </div>
+            <br />
+            <div class="main-text-content-3">
+              1 / 5 completed
+              <input type="range" />
+            </div>
+          </div>
+          <div class="collapsible-chevron">
+            <img
+              src="https://crushingit.tech/hackathon-assets/icon-arrow-up.svg"
+              alt="Collasible arrow-up"
+            />
+          </div>
+        </div>
+        <div class="collapsible__content collapsible--boder">
+          <div>
+            <div class="collapsible--icon">
+              <img
+                src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                alt=" An icon-dashed-circle"
+              />
+              <div class="collapsible__header main-text-content-1">
+                Customize your online
+              </div>
+            </div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+            corporis quas beatae quis? Enim hic accusamus quas officia aut minus
+            molestias provident aliquid, velit ut commodi quae illo fugiat
+            cupiditate.
+          </div>
+        </div>
+      </div>
+    </main>
+
     <script src="main.js"></script>
   </body>
 </html>

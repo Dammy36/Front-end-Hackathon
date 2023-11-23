@@ -1,13 +1,20 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
+  background: #f1f1f1;
 }
 
+/*Navigation*/
 nav {
-  padding-top: 10px;
-  background-color: #1a1a1a;
-  color: white;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  background-color: #1c181d;
+  color: #656266;
+}
+
+.desktop-hide {
+  display: none;
 }
 
 .nav-header {
@@ -34,14 +41,19 @@ nav {
   padding-bottom: 6px;
   padding-top: 6px;
   border-radius: 8px;
-  border: 1px solid gray;
-  background-color: #303030;
+  border: 1px solid #656266;
+  background-color: #322f33;
   font-size: 13px;
-  text-align: left;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.search-bar:hover {
+  border: 2px solid #e3e3e3;
 }
 
 .search-bar::placeholder {
-  color: gray;
+  color: #e3e3e3;
 }
 
 .search-button {
@@ -51,6 +63,7 @@ nav {
   transform: translate(-50%, -50%);
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 
 .search-button img {
@@ -63,56 +76,310 @@ nav {
   display: flex;
   justify-content: space-between;
   align-self: center;
+  border-radius: 8px;
+  background: #303030;
+  color: #e3e3e3;
+  margin-right: 15px;
+  text-align: left;
+  cursor: pointer;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 40px;
+  font-size: 12px;
 }
 
-.bell-button {
-  margin-right: 10px;
-  border: none;
-  border-radius: 6px;
-  background-color: #303030;
-  padding: 6px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+.notification-icon:hover {
+  background: #656266;
+  border: 2px solid rgb(53, 53, 233);
 }
 
-.bell-button img {
+.bell-button img,
+.search-image-icon {
   width: 20px;
   height: 20px;
   filter: invert(100%);
 }
 
-.nav-text {
-  border-radius: 8px;
-  background-color: #303030;
-  padding-left: 8px;
-  padding-right: 45px;
-  padding-top: 0;
-  padding-bottom: 0;
+.nav-text-content {
+  margin-top: 3px;
+  margin-left: 5px;
+
   position: relative;
-  margin-right: 10px;
 }
-.nav-text,
 .nav_text-content {
-  display: inline-flex;
-  align-items: center;
+  background-color: #36fba1;
+  padding: 8px;
+  border-radius: 6px;
+  color: #1a1a1a;
+  opacity: 2;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  display: inline;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
 .nav-text-content {
   font-size: 12px;
   letter-spacing: 1;
   color: rgb(201, 193, 193);
+  text-align: center;
 }
 
-.nav_text-content {
-  background-color: #36fba1;
-  padding: 5px 5px;
+@media (max-width: 600px) {
+  nav {
+    padding-top: 5px;
+  }
+  .nav-input {
+    margin-left: 30px;
+    margin-right: 0;
+    min-width: 300px;
+  }
+
+  .image-icon {
+    margin-top: 5px;
+  }
+  .mobile-display {
+    display: none;
+  }
+  .desktop-hide {
+    display: block;
+  }
+
+  .nav-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .notification-icon {
+    margin-right: 10px;
+    background: none;
+  }
+
+  .nav-text-content {
+    display: none;
+  }
+  .nav_text-content {
+    right: 0px;
+    top: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-input {
+    margin-left: 10px;
+    min-width: 220px;
+    margin-top: 5px;
+  }
+
+  .nav-text {
+    padding-right: 35px;
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
+
+  .notification-icon {
+    margin-left: 10%;
+  }
+}
+
+/*header- section*/
+
+header {
+  margin-top: 30px;
+}
+header .container {
+  text-align: center;
+  background: #272626;
+  border-radius: 8px;
+  color: #e3e3e3;
+  width: 800px;
+  margin: auto;
+  padding: 5px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.section-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+}
+.container .section p {
+  margin-left: 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+.container .section-text2 {
+  font-size: 13px;
+  margin-right: 15px;
+  padding: 5px 10px;
   border-radius: 6px;
-  color: #1a1a1a;
-  opacity: 2;
-  position: absolute;
-  right: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-  overflow: hidden;
+  background: #fff;
+  color: #323232;
+  cursor: pointer;
+}
+
+.search-image-icon2 {
+  margin-right: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .section {
+    display: block;
+  }
+
+  header .container {
+    width: 500px;
+    border-radius: 0;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .section-text {
+    display: block;
+    margin: 0;
+  }
+
+  .container .section p {
+    font-size: 15px;
+    margin-left: 10px;
+    position: relative;
+  }
+
+  .section-plan {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .container .section-text2 {
+    font-size: 13px;
+    width: 100px;
+    margin-left: 10px;
+  }
+
+  .search-image-icon2 {
+    position: absolute;
+    right: 60px;
+    top: 22%;
+  }
+}
+
+@media (max-width: 480px) {
+  header .container {
+    margin-top: 30px;
+    width: 390px;
+  }
+
+  .search-image-icon2 {
+    right: -2px;
+    top: 15%;
+  }
+}
+
+/*Main Section*/
+main {
+  margin-top: 20px;
+}
+
+.main-section {
+  text-align: left;
+  background: #fff;
+  border-radius: 10px;
+  color: #303030;
+  width: 800px;
+  margin: auto;
+  font-size: 13px;
+}
+
+.main-section_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-text-content {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.main-text-content-1 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.main-text-content-2 {
+  line-height: 1;
+}
+
+.main-text-content-3 {
+  font-size: 12px;
+}
+
+.collapsible-chevron {
+  margin-right: 10px;
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.collapsible--expanded .collapsible-chevron {
+  transform: rotate(0);
+}
+.collapsible__content {
+  display: none;
+}
+
+.collapsible--expanded .collapsible__content {
+  display: block;
+}
+
+.collapsible--boder {
+  width: 750px;
+  background: #f3f3f3;
+  border-radius: 6px;
+  margin: 5px;
+}
+.collapsible--icon {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.collapsible--icon img {
+  width: 25px;
+  height: 25px;
+  filter: invert(50%);
+}
+.collapsible__header {
+  margin-left: 5px;
+  font-size: 12px;
+}
+@media (max-width: 600px) {
+  .main-section {
+    width: 500px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-section {
+    width: 390px;
+  }
 }
