@@ -101,18 +101,136 @@ nav {
   filter: invert(100%);
 }
 
+.notification__inline {
+  position: relative;
+}
+
+.notification-bar {
+  max-width: 400px;
+  height: 120px;
+  padding-left: 5px;
+  display: none;
+}
+.notification-bar,
+.menu-bar {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  position: absolute;
+  right: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.notification-bar-1,
+.menu-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
+.notification-boder-2 {
+  margin-top: 30px;
+  border-radius: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 12px;
+  display: inline-block;
+  background: #f1f1f1;
+}
+
+.menu-boder {
+  margin-top: 7px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+.menu-bar {
+  width: 270px;
+  height: 400px;
+  top: 60px;
+}
+
+.menu-bar-header {
+  margin: 10px;
+}
+.menu-bar-header2,
+.store-logo {
+  display: flex;
+  align-items: center;
+}
+
+.store-logo {
+  margin: 20px;
+}
+
+.store-text,
+.horizontal-text {
+  font-size: 13px;
+  margin-left: 10px;
+  font-weight: 600;
+  color: #656266;
+}
+
+.horizontal-line {
+  margin: 0;
+  border: 1px solid #f1f1f1;
+  padding: 10px;
+}
+
+.horizontal-text {
+  margin: 0;
+}
+
+.text-section {
+  padding: 8px;
+}
+
+.text-section__2 {
+  margin-bottom: 0;
+}
+
+.menu-bar-header-text-1 {
+  margin-left: 0;
+  padding: 4px;
+  font-size: 11px;
+}
+
+.menu-icon-image {
+  background-color: transparent;
+  border: none;
+}
+
+.menu-bar-header-text-2 {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.notification-bar__text {
+  font-size: 12px;
+}
+.notification-image {
+  margin-right: 10px;
+}
+
 .nav-text-content {
   margin-top: 3px;
   margin-left: 5px;
-
   position: relative;
 }
-.nav_text-content {
+
+.nav_text-content,
+.menu-bar-header-text-1 {
   background-color: #36fba1;
   padding: 8px;
   border-radius: 6px;
   color: #1a1a1a;
   opacity: 2;
+}
+
+.nav_text-content {
   margin-left: 10px;
   margin-bottom: 5px;
   display: inline;
