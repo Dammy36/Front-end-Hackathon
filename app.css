@@ -25,6 +25,9 @@ nav {
   padding-bottom: 5px;
 }
 
+input {
+  color: #f3f3f3;
+}
 .nav-input {
   margin-left: 70px;
   margin-right: 35px;
@@ -76,22 +79,54 @@ nav {
   display: flex;
   justify-content: space-between;
   align-self: center;
-  border-radius: 8px;
-  background: #303030;
-  color: #e3e3e3;
-  margin-right: 15px;
-  text-align: left;
-  cursor: pointer;
-  padding-top: 8px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 40px;
-  font-size: 12px;
 }
 
-.notification-icon:hover {
+.bell-button {
+  margin-right: 15px;
+  padding: 6px;
+}
+.bell-button,
+.nav-text {
+  background: #303030;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bell-button:hover {
   background: #656266;
   border: 2px solid rgb(53, 53, 233);
+}
+.nav-text:hover {
+  background: #656266;
+  border: 2px solid rgb(53, 53, 233);
+}
+.nav-text {
+  padding-left: 5px;
+  padding-right: 45px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.nav_text-content,
+.menu-bar-header-text-1 {
+  background-color: #36fba1;
+  border-radius: 6px;
+  color: #1a1a1a;
+  opacity: 2;
+}
+
+.nav_text-content {
+  position: absolute;
+  right: 15px;
+  top: 17px;
+  padding: 3px;
+}
+
+.nav-text-content {
+  font-size: 12px;
+  letter-spacing: 1;
+  color: rgb(201, 193, 193);
 }
 
 .bell-button img,
@@ -139,7 +174,7 @@ nav {
   display: inline-block;
   background: #f1f1f1;
 }
-
+/*Menu-section*/
 .menu-boder {
   margin-top: 7px;
   margin-left: 8px;
@@ -167,11 +202,37 @@ nav {
 }
 
 .store-text,
-.horizontal-text {
+.horizontal-text,
+.text-section__one {
   font-size: 13px;
   margin-left: 10px;
   font-weight: 600;
   color: #656266;
+}
+
+.text-section a,
+.section-text2 a {
+  text-decoration: none;
+  color: #656266;
+}
+
+.text-section__one {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.text-section_one {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.text-section__two {
+  display: block;
+  color: #656266;
+}
+
+.text-section__three {
+  margin-top: 20px;
 }
 
 .horizontal-line {
@@ -221,31 +282,6 @@ nav {
   position: relative;
 }
 
-.nav_text-content,
-.menu-bar-header-text-1 {
-  background-color: #36fba1;
-  padding: 8px;
-  border-radius: 6px;
-  color: #1a1a1a;
-  opacity: 2;
-}
-
-.nav_text-content {
-  margin-left: 10px;
-  margin-bottom: 5px;
-  display: inline;
-  position: absolute;
-  right: 15px;
-  top: 15px;
-}
-
-.nav-text-content {
-  font-size: 12px;
-  letter-spacing: 1;
-  color: rgb(201, 193, 193);
-  text-align: center;
-}
-
 @media (max-width: 600px) {
   nav {
     padding-top: 5px;
@@ -271,18 +307,19 @@ nav {
     justify-content: flex-start;
     align-items: center;
   }
-  .notification-icon {
-    margin-right: 10px;
-    background: none;
-  }
 
   .nav-text-content {
     display: none;
   }
   .nav_text-content {
-    right: 0px;
+    right: 10px;
     top: 10px;
     margin-right: 10px;
+  }
+
+  .bell-button,
+  .nav-text {
+    background: none;
   }
 }
 
@@ -301,6 +338,11 @@ nav {
 
   .notification-icon {
     margin-left: 10%;
+  }
+
+  .menu-bar {
+    width: 320px;
+    height: 420px;
   }
 }
 
@@ -342,6 +384,7 @@ header .container {
 
 .container .section-text2 {
   font-size: 13px;
+  font-weight: 600;
   margin-right: 15px;
   padding: 5px 10px;
   border-radius: 6px;
@@ -374,7 +417,6 @@ header .container {
   }
 
   .container .section p {
-    font-size: 15px;
     margin-left: 10px;
     position: relative;
   }
