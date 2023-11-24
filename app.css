@@ -462,6 +462,7 @@ main {
   border-radius: 10px;
   color: #303030;
   width: 800px;
+  height: 80vh;
   margin: auto;
   font-size: 13px;
 }
@@ -513,7 +514,12 @@ main {
   width: 750px;
   background: #f3f3f3;
   border-radius: 6px;
-  margin: 5px;
+}
+
+.collapsible--boder-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .collapsible--icon {
   display: flex;
