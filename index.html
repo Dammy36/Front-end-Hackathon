@@ -56,16 +56,31 @@
         </div>
 
         <div class="notification-icon">
-          <div class="bell-button">
+          <button
+            id="bell-menu-notification"
+            class="bell-button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="notification-menu-content"
+          >
             <img
               src="https://crushingit.tech/hackathon-assets/icon-bell.svg"
               alt="Notificaion-bell"
             />
-          </div>
+          </button>
 
           <div class="nav-text">
-            <div class="nav-text-content">Davii Collections</div>
-            <div class="nav_text-content">DC</div>
+            <button
+              class="nav-text-content"
+              id="nav-button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="menu-bar"
+            >
+              Davii Collections
+            </button>
+
+            <button class="nav_text-content" id="nav-display">DC</button>
           </div>
         </div>
       </div>
@@ -73,7 +88,12 @@
 
     <menu>
       <div class="notification__inline">
-        <div class="notification-bar">
+        <div
+          class="notification-bar"
+          role="menu"
+          id="notification-menu-content"
+          aria-labelledby="bell-menu"
+        >
           <div class="notification-bar-1">
             <div>Alert</div>
             <div class="notification-image">
@@ -96,81 +116,92 @@
           </div>
         </div>
       </div>
-      <div class="menu-bar notification__inline">
-        <div class="menu-boder">
-          <div class="notification-bar-1 menu-bar-header">
-            <div class="menu-bar-header2">
-              <div class="menu-bar-header-text-1">DC</div>
-              <div class="menu-bar-header-text-2 main-text-content-1">
-                Davii Collections
+
+      <div class="notification__inline">
+        <div
+          class="menu-bar"
+          role="menu"
+          id="menu-bar-content"
+          aria-labelledby="nav-text"
+        >
+          <div class="menu-boder">
+            <div class="menu-bar-header">
+              <div class="menu-bar-header2">
+                <div class="menu-bar-header-text-1">DC</div>
+                <div class="menu-bar-header-text-2 main-text-content-1">
+                  Davii Collections
+                </div>
+              </div>
+
+              <div>
+                <img
+                  class="search-image-icon menu-icon-image"
+                  src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg"
+                  alt="Checked mark"
+                />
               </div>
             </div>
+          </div>
 
-            <div>
-              <img
-                class="search-image-icon menu-icon-image"
-                src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg"
-                alt="Checked mark"
-              />
+          <div class="store-logo">
+            <img
+              src="https://crushingit.tech/hackathon-assets/icon-store.svg"
+              alt="Store- logo"
+            />
+            <div class="store-text">All Stores</div>
+          </div>
+          <div class="horizontal-line">
+            <div class="horizontal-text">
+              <div class="text-section">
+                <a
+                  href="http://admin.shopify.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  role="menu"
+                  >Help Center</a
+                >
+              </div>
+              <div class="text-section">
+                <a
+                  href="http://admin.shopify.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  role="menu"
+                  >Changelog</a
+                >
+              </div>
+              <div class="text-section">
+                <a
+                  href="http://admin.shopify.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Community forum</a
+                >
+              </div>
+              <div class="text-section">
+                <a
+                  href="http://admin.shopify.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  role="menu"
+                  >Hire a shopify partner</a
+                >
+              </div>
+              <div class="text-section">
+                <a href="http://admin.shopify.com" target="_blank"
+                  >Keyboard shortcuts</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="store-logo">
-          <img
-            src="https://crushingit.tech/hackathon-assets/icon-store.svg"
-            alt="Store- logo"
-          />
-          <div class="store-text">All Stores</div>
-        </div>
-        <div class="horizontal-line">
-          <div class="horizontal-text">
-            <div class="text-section">
-              <a
-                href="http://admin.shopify.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Help Center</a
-              >
+          <div class="text-section__one">
+            <div class="text-section_one">
+              David Micheal
+              <span class="text-section__two">davidmicheal@gmail</span>
             </div>
-            <div class="text-section">
-              <a
-                href="http://admin.shopify.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Changelog</a
-              >
-            </div>
-            <div class="text-section">
-              <a
-                href="http://admin.shopify.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Community forum</a
-              >
-            </div>
-            <div class="text-section">
-              <a
-                href="http://admin.shopify.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Hire a shopify partner</a
-              >
-            </div>
-            <div class="text-section">
-              <a href="http://admin.shopify.com" target="_blank"
-                >Keyboard shortcuts</a
-              >
-            </div>
+            <div class="text-section__three">Manage account</div>
+            <div class="text-section__three">Log out</div>
           </div>
-        </div>
-        <div class="text-section__one">
-          <div class="text-section_one">
-            David Micheal
-            <span class="text-section__two">davidmicheal@gmail</span>
-          </div>
-          <div class="text-section__three">Manage account</div>
-          <div class="text-section__three">Log out</div>
         </div>
       </div>
     </menu>
@@ -203,7 +234,7 @@
     </header>
 
     <main>
-      <div class="main-section collapsible--expanded">
+      <div class="main-section">
         <div class="main-section_text">
           <div class="main-text-content">
             <div class="main-text-content-1">Setup guide</div>
@@ -213,36 +244,99 @@
             <br />
             <div class="main-text-content-3">
               1 / 5 completed
-              <input type="range" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="72"
+                height="4"
+                viewBox="0 0 72 4"
+                fill="#E3E3E3"
+              >
+                <rect width="72" height="4" rx="2" fill="#E3E3E3" />
+                <rect width="18" height="4" fill="#1A1A1A" />
+              </svg>
             </div>
           </div>
-          <div></div>
-          <div class="collapsible-chevron">
+
+          <div class="collapsible-chevron" id="collapsible--chevron2">
             <img
               src="https://crushingit.tech/hackathon-assets/icon-arrow-up.svg"
-              alt="Collasible arrow-up"
+              alt=" Arrow icon"
             />
           </div>
         </div>
         <div class="collapsible__content">
-          <div class="collapsible--icon">
-            <img
-              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
-              alt=" An icon-dashed-circle"
-            />
-            <div class="collapsible__header main-text-content-1">
-              Customize your online
+          <div class="collapsible--boder">
+            <div class="collapsible--icon">
+              <img
+                src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                alt=" An icon-dashed-circle"
+              />
+              <div class="collapsible__header main-text-content-1">
+                Customize your online
+              </div>
+            </div>
+            <div class="collapsible--boder-text">
+              <div class="boder-text">
+                Choose a theme and add your logo, colors and images to reflect
+                your brand
+                <a
+                  href="http://shopify.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="learn-info"
+                >
+                  Learn more</a
+                >
+
+                <div>
+                  <button class="collapsible--button">Customize theme</button>
+                </div>
+              </div>
+              <div>
+                <img
+                  src="https://crushingit.tech/hackathon-assets/customise-store.png"
+                  alt=" shopify image"
+                />
+              </div>
             </div>
           </div>
-          <div class="collapsible--icon">
-            <img
-              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
-              alt=" An icon-dashed-circle"
-            />
-            <div class="collapsible__header main-text-content-1">
-              Add your first product
+          <div class="collapsible--boder">
+            <div class="collapsible--icon">
+              <img
+                src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                alt=" An icon-dashed-circle"
+              />
+              <div class="collapsible__header main-text-content-1">
+                Add your first product
+              </div>
+            </div>
+            <div class="collapsible--boder-text">
+              <div class="boder-text">
+                Write a description, add photos and set pricing for products you
+                plan to sell.
+                <a
+                  href="http://shopify.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="learn-info"
+                  >Learn more</a
+                >
+                <div>
+                  <button class="collapsible--button">Add product</button>
+                  <button class="collapsible--button-import">
+                    Import product
+                  </button>
+                </div>
+              </div>
+              <div>
+                <img
+                  src="https://crushingit.tech/hackathon-assets/product.png"
+                  alt=" shopify image"
+                />
+              </div>
             </div>
           </div>
+
           <div class="collapsible--boder">
             <div class="collapsible--icon">
               <img
@@ -254,19 +348,92 @@
               </div>
             </div>
             <div class="collapsible--boder-text">
-              <div>
+              <div class="boder-text">
                 Your current domain is 222219.myshopify.com but you can add a
-                custom domain to helpcustomer find your online store.
+                custom domain to help customer find your online store.
                 <a
                   href="http://shopify.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Learn more</a
-                >
+                  class="learn-info"
+                ></a>
+                <div>
+                  <button class="collapsible--button">Add domain</button>
+                </div>
               </div>
               <div>
                 <img
                   src="https://crushingit.tech/hackathon-assets/website.png"
+                  alt=" shopify image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="collapsible--boder">
+            <div class="collapsible--icon">
+              <img
+                src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                alt=" An icon-dashed-circle"
+              />
+              <div class="collapsible__header main-text-content-1">
+                Name your store
+              </div>
+            </div>
+            <div class="collapsible--boder-text">
+              <div class="boder-text">
+                Your temporary store name is currenrly Davil collection. The
+                store name appears in your admin and your online store.
+                <a
+                  href="http://shopify.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="learn-info"
+                  >Learn more</a
+                >
+                <div>
+                  <button class="collapsible--button">Name store</button>
+                </div>
+              </div>
+              <div>
+                <img
+                  src="https://crushingit.tech/hackathon-assets/name-store.png"
+                  alt=" shopify image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="collapsible--boder">
+            <div class="collapsible--icon">
+              <img
+                src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                alt=" An icon-dashed-circle"
+              />
+              <div class="collapsible__header main-text-content-1">
+                Set up a payment provider
+              </div>
+            </div>
+            <div class="collapsible--boder-text">
+              <div class="boder-text">
+                choose a payment to start accepting payments You'll need to
+                create an account with the payment provider and set it up with
+                your shopify store.
+
+                <a
+                  href="http://shopify.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="learn-info"
+                  >Learn more</a
+                >
+                <div>
+                  <button class="collapsible--button">Set up payment</button>
+                </div>
+              </div>
+              <div>
+                <img
+                  src="https://crushingit.tech/hackathon-assets/payment.png"
                   alt=" shopify image"
                 />
               </div>
