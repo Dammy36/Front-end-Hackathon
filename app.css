@@ -102,8 +102,7 @@ input {
 }
 
 .bell-button:active,
-.bell-button:focus,
-.nav-text:focus {
+.bell-button:focus {
   background: #656266;
 }
 
@@ -205,7 +204,7 @@ input {
 }
 .menu-bar {
   width: 270px;
-  height: 430px;
+  max-height: 500px;
   top: 0;
 }
 
@@ -230,12 +229,17 @@ input {
   align-items: center;
 }
 
-.store-logo {
-  margin: 20px;
+.store-logo,
+.text-section,
+.text-section_one,
+.text-section__three {
+  margin: 5px;
+  padding: 4px 12px 4px 8px;
+  align-self: stretch;
 }
 
 .store-text,
-.horizontal-text,
+.text-section,
 .text-section__one {
   font-size: 13px;
   margin-left: 10px;
@@ -244,20 +248,41 @@ input {
   cursor: pointer;
 }
 
-.store-text:hover,
-.store-text:active {
-  background-color: #656266;
-  color: #f1f1f1;
+.text-section__three:hover,
+.text-section__three:active,
+.text-section__three:focus,
+.text-section_one:hover,
+.text-section_one:active,
+.text-section_one:focus,
+.text-section:hover,
+.text-section:active,
+.text-section:focus,
+.store-logo:hover,
+.store-logo:active,
+.store-logo:focus {
+  background-color: #f1f1f1;
   border-radius: 8px;
-  display: flex;
-  padding: 6px;
-  align-items: center;
   gap: 8px;
-  align-self: stretch;
 }
 
-.store-text:focus {
+.changelog {
+  display: block;
+}
+
+.menu-bar-header-text-1 {
+  border: none;
+}
+
+.horizontal-text button,
+.menu-bar-header-text-2,
+.store-logo {
+  border: none;
+  background: none;
+}
+.horizontal-text button:focus,
+.store-logo:focus {
   outline: 2px solid #005bd3;
+  outline-offset: 1px;
 }
 
 .text-section a,
@@ -310,8 +335,8 @@ input {
 }
 
 .menu-bar-header-text-2 {
-  margin-left: 5px;
-  margin-top: 5px;
+  margin-left: 10px;
+  margin-top: 8px;
 }
 
 .notification-bar__text {
@@ -327,7 +352,7 @@ input {
   position: relative;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   nav {
     padding-top: 5px;
   }
@@ -423,6 +448,11 @@ header .container {
   font-weight: 200;
 }
 
+.section button {
+  background: none;
+  border: none;
+}
+
 .container .section-text2 {
   font-size: 13px;
   font-weight: 600;
@@ -440,7 +470,7 @@ header .container {
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .section {
     display: block;
   }
@@ -475,8 +505,8 @@ header .container {
 
   .search-image-icon2 {
     position: absolute;
-    right: 60px;
-    top: 22%;
+    right: 30%;
+    top: 25%;
   }
 }
 
@@ -503,7 +533,7 @@ main {
   border-radius: 10px;
   color: #303030;
   width: 800px;
-  height: 160svh;
+
   margin: auto;
   font-size: 13px;
 }
@@ -524,7 +554,8 @@ main {
   line-height: 140%;
 }
 
-.main-text-content-1 {
+.main-text-content-1,
+.menu-bar-header-text-2 {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
@@ -552,7 +583,6 @@ main {
   margin-right: 10px;
   transition: transform 0.3s;
   cursor: pointer;
-  transform: rotate(0);
 }
 
 .collapsible--expanded .collapsible-chevron {
@@ -566,10 +596,16 @@ main {
   display: block;
 }
 .collapsible--boder {
-  width: 750px;
+  padding: 8px 8px 12px 8px;
   background: #f3f3f3;
   border-radius: 10px;
-  margin: auto;
+}
+.collapsible--boder {
+  display: none;
+}
+
+.collapsible--boder_content {
+  display: block;
 }
 
 .collapsible--boder-text {
@@ -629,6 +665,7 @@ main {
   align-items: center;
   margin-left: 10px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .collapsible--icon img {
@@ -641,7 +678,7 @@ main {
   font-size: 12px;
   margin-top: 10px;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .main-section {
     width: 500px;
     margin: auto;

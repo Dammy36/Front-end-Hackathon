@@ -90,7 +90,6 @@
       <div class="notification__inline">
         <div
           class="notification-bar"
-          role="menu"
           id="notification-menu-content"
           aria-labelledby="bell-menu"
         >
@@ -122,15 +121,17 @@
           class="menu-bar"
           role="menu"
           id="menu-bar-content"
-          aria-labelledby="nav-text"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="horizontal-text"
         >
           <div class="menu-boder">
             <div class="menu-bar-header">
               <div class="menu-bar-header2">
-                <div class="menu-bar-header-text-1">DC</div>
-                <div class="menu-bar-header-text-2 main-text-content-1">
+                <button class="menu-bar-header-text-1">DC</button>
+                <button class="menu-bar-header-text-2">
                   Davii Collections
-                </div>
+                </button>
               </div>
 
               <div>
@@ -143,16 +144,16 @@
             </div>
           </div>
 
-          <div class="store-logo">
+          <button class="store-logo">
             <img
               src="https://crushingit.tech/hackathon-assets/icon-store.svg"
               alt="Store- logo"
             />
             <div class="store-text">All Stores</div>
-          </div>
+          </button>
           <div class="horizontal-line">
             <div class="horizontal-text">
-              <div class="text-section">
+              <button class="text-section">
                 <a
                   href="http://admin.shopify.com"
                   target="_blank"
@@ -160,8 +161,8 @@
                   role="menu"
                   >Help Center</a
                 >
-              </div>
-              <div class="text-section">
+              </button>
+              <button class="text-section changelog">
                 <a
                   href="http://admin.shopify.com"
                   target="_blank"
@@ -169,16 +170,17 @@
                   role="menu"
                   >Changelog</a
                 >
-              </div>
-              <div class="text-section">
+              </button>
+              <button class="text-section">
                 <a
                   href="http://admin.shopify.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  role="menu"
                   >Community forum</a
                 >
-              </div>
-              <div class="text-section">
+              </button>
+              <button class="text-section">
                 <a
                   href="http://admin.shopify.com"
                   target="_blank"
@@ -186,12 +188,12 @@
                   role="menu"
                   >Hire a shopify partner</a
                 >
-              </div>
-              <div class="text-section">
+              </button>
+              <button class="text-section">
                 <a href="http://admin.shopify.com" target="_blank"
                   >Keyboard shortcuts</a
                 >
-              </div>
+              </button>
             </div>
           </div>
           <div class="text-section__one">
@@ -223,11 +225,13 @@
                 Select a plan</a
               >
             </div>
-            <img
-              class="search-image-icon search-image-icon2"
-              src="https://crushingit.tech/hackathon-assets/icon-cross.svg"
-              alt="A cancle"
-            />
+            <button>
+              <img
+                class="search-image-icon search-image-icon2"
+                src="https://crushingit.tech/hackathon-assets/icon-cross.svg"
+                alt="A cancle"
+              />
+            </button>
           </div>
         </div>
       </div>
@@ -265,16 +269,16 @@
           </div>
         </div>
         <div class="collapsible__content">
-          <div class="collapsible--boder">
-            <div class="collapsible--icon">
-              <img
-                src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
-                alt=" An icon-dashed-circle"
-              />
-              <div class="collapsible__header main-text-content-1">
-                Customize your online
-              </div>
+          <div class="collapsible--icon">
+            <img
+              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+              alt=" An icon-dashed-circle"
+            />
+            <div class="collapsible__header main-text-content-1">
+              Customize your online
             </div>
+          </div>
+          <div class="collapsible--boder">
             <div class="collapsible--boder-text">
               <div class="boder-text">
                 Choose a theme and add your logo, colors and images to reflect
@@ -300,16 +304,17 @@
               </div>
             </div>
           </div>
-          <div class="collapsible--boder">
-            <div class="collapsible--icon">
-              <img
-                src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
-                alt=" An icon-dashed-circle"
-              />
-              <div class="collapsible__header main-text-content-1">
-                Add your first product
-              </div>
+
+          <div class="collapsible--icon">
+            <img
+              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+              alt=" An icon-dashed-circle"
+            />
+            <div class="collapsible__header main-text-content-1">
+              Add your first product
             </div>
+          </div>
+          <div class="collapsible--boder">
             <div class="collapsible--boder-text">
               <div class="boder-text">
                 Write a description, add photos and set pricing for products you
@@ -337,16 +342,16 @@
             </div>
           </div>
 
-          <div class="collapsible--boder">
-            <div class="collapsible--icon">
-              <img
-                src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
-                alt=" An icon-dashed-circle"
-              />
-              <div class="collapsible__header main-text-content-1">
-                Add a custom domain
-              </div>
+          <div class="collapsible--icon">
+            <img
+              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+              alt=" An icon-dashed-circle"
+            />
+            <div class="collapsible__header main-text-content-1">
+              Add a custom domain
             </div>
+          </div>
+          <div class="collapsible--boder">
             <div class="collapsible--boder-text">
               <div class="boder-text">
                 Your current domain is 222219.myshopify.com but you can add a
@@ -370,16 +375,16 @@
             </div>
           </div>
 
-          <div class="collapsible--boder">
-            <div class="collapsible--icon">
-              <img
-                src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
-                alt=" An icon-dashed-circle"
-              />
-              <div class="collapsible__header main-text-content-1">
-                Name your store
-              </div>
+          <div class="collapsible--icon">
+            <img
+              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+              alt=" An icon-dashed-circle"
+            />
+            <div class="collapsible__header main-text-content-1">
+              Name your store
             </div>
+          </div>
+          <div class="collapsible--boder">
             <div class="collapsible--boder-text">
               <div class="boder-text">
                 Your temporary store name is currenrly Davil collection. The
@@ -404,16 +409,16 @@
             </div>
           </div>
 
-          <div class="collapsible--boder">
-            <div class="collapsible--icon">
-              <img
-                src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
-                alt=" An icon-dashed-circle"
-              />
-              <div class="collapsible__header main-text-content-1">
-                Set up a payment provider
-              </div>
+          <div class="collapsible--icon">
+            <img
+              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+              alt=" An icon-dashed-circle"
+            />
+            <div class="collapsible__header main-text-content-1">
+              Set up a payment provider
             </div>
+          </div>
+          <div class="collapsible--boder">
             <div class="collapsible--boder-text">
               <div class="boder-text">
                 choose a payment to start accepting payments You'll need to
